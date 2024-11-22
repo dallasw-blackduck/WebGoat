@@ -24,7 +24,9 @@ jobs:
       - name: Black Duck Scan
         continue-on-error: true
         uses: synopsys-sig/synopsys-action@v1.6.0
+        env:
+          DETECT_POLICY_CHECK_FAIL_ON_SEVERITIES: 'BLOCKER,CRITICAL'
         with:
           blackduck_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
-          blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
+          # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
