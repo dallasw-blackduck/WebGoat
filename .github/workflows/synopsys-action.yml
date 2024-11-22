@@ -26,5 +26,6 @@ jobs:
         with:
           blackduck_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
-          # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
+          blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
+          break_build: false
           
