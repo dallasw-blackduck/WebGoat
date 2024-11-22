@@ -28,4 +28,3 @@ jobs:
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
           bridge_break: false
-          
