@@ -1,10 +1,18 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
 trigger:
 - main
+
+- task: BlackDuckSecurityScan@2
+  inputs:
+    scanType: 'blackducksca'
+    blackduckScaUrl: 'https://us03-sup-dweber01.nprd.sig.synopsys.com/'
+    blackduckScaToken: 'asdf'
+    blackduckScaProjectDirectory: '/asdf/asdf/asdf'
 
 pool:
   vmImage: ubuntu-latest
