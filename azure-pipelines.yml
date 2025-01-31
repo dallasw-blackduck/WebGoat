@@ -7,19 +7,18 @@
 trigger:
 - main
 
+
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
 - task: BlackDuckSecurityScan@2
   inputs:
     scanType: 'blackducksca'
     blackduckScaUrl: 'https://us03-sup-dweber01.nprd.sig.synopsys.com/'
     blackduckScaToken: 'asdf'
     blackduckScaProjectDirectory: '/asdf/asdf/asdf'
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
